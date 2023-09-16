@@ -3,11 +3,17 @@ Arduino Based Rotating Jenga
 
 ## Requirements
 1- Arduino
+
 1- Motor Driver L298N
+
 1- Bluetooth Module (HC-06)
+
 20- Jumper Wires
+
 2- 3.7V Li-ion Cell 
+
 1- Yellow Gear Motor
+
 
 ## Description
 ### NOT YOUR NORMAL JENGA by NES
