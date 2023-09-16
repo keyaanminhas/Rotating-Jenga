@@ -26,11 +26,11 @@ private:
 	bool _toggle = false;
 
 public:
-	void Jenga(mode m, const int m1, const int m2, const int m3en);
-	void Jenga(const int m1, const int m2, const int m3en);
+	Jenga(mode m, const int m1, const int m2, const int m3en);
+	Jenga(const int m1, const int m2, const int m3en);
 	void Jenga_setup();
 	void Jenga_loop();
 	void set_mode(mode);
-}
+};
 
 #endif
