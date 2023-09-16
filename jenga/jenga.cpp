@@ -13,19 +13,19 @@ Jenga::Jenga(const int m1, const int m2, const int m3en)
 	Jenga_setup();
 }
 
-Jenga::Jenga_setup(){
-	randomSeed(analogRead(0))
+void Jenga::Jenga_setup(){
+	randomSeed(analogRead(0));
 	pinMode(_m1, OUTPUT);
 	pinMode(_m2, OUTPUT);
 	pinMode(_m3en, OUTPUT);
 	digitalWrite(_m1, LOW);
 	digitalWrite(_m2, LOW);
-	analogWrite(m3en, 0);
+	analogWrite(_m3en, 0);
 }
 
-Jenga::Jenga_loop(){
+void Jenga::Jenga_loop(){
 	if (random(1,16) == 7){
-		_toggle = !(_toggle)
+		_toggle = !(_toggle);
 	}
 	if (_current_mode == EASY){
 		analogWrite(_m3en, EASY_SPEED);
@@ -39,13 +39,21 @@ Jenga::Jenga_loop(){
 		}
 		else{
 			digitalWrite(_m1, LOW);
-			digitalWrite(_m2, HIGH)
+			digitalWrite(_m2, HIGH);
 		}
 
 	}
 	else if (_current_mode == HARD){
-		analogWrite(m3en, HARD_SPEED);
-		digitalWrite(_m1, HIGH);
+		analogWrite(_m3en, HARD_SPEED);
+		if (_toggle){
+			digitalWrite(_m1, HIGH);
+			digitalWrite(_m2, LOW);
+		}
+		else{
+			digitalWrite(_m1, LOW);
+			digitalWrite(_m2, HIGH);
+		}
+
 	}
 
 }
