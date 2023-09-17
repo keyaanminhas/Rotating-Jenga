@@ -39,7 +39,8 @@ public:
 	Jenga(const int m1, const int m2, const int m3en);
 	void Jenga_setup(const int EASYSPEED, const int MEDIUMSPEED, const int HARDSPEED, const int CHANCE);
 	void Jenga_loop();
-	void set_mode(mode);
+	void set_mode(mode m);
+	void direction(String dir);
 };
 
 #endif

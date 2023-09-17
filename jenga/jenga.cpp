@@ -80,7 +80,7 @@ void Jenga::Jenga_setup(const int EASYSPEED, const int MEDIUMSPEED, const int HA
 }
 
 void Jenga::Jenga_loop(){
-	if (random(0,CHANCES) == 0){
+	if ((random(0,CHANCES) == 0) and (_current_mode != CUSTOM)){
 		_toggle = !(_toggle);
 	}
 	if (_current_mode == EASY){
@@ -114,3 +114,19 @@ void Jenga::Jenga_loop(){
 
 }
 #endif
+
+
+void Jenga::set_mode(mode m){
+	_current_mode = m;
+}
+
+void Jenga::direction(String dir){
+	if ((dir == "LEFT") and (_current_mode == CUSTOM)){
+		digitalWrite(_m1, HIGH);
+		digitalWrite(_m2, LOW);
+	}
+	else if ((dir == "RIGHT") and (_current_mode == CUSTOM)){
+		digitalWrite(_m1, LOW);
+		digitalWrite(_m2, HIGH);
+	}
+}
