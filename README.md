@@ -6,7 +6,7 @@ Arduino Based Rotating Jenga
 
 1- Motor Driver L298N
 
-1- Bluetooth Module (HC-06)
+1- Bluetooth Module (HC-06/HC-05)
 
 20- Jumper Wires
 
@@ -24,8 +24,6 @@ Four modes - Easy, Medium, Hard, Jenga pvp
 Rules - Normal jenga but the base rotates and the jenga tower spins
 
 Jenga pvp - the player with the turn after you can control the turning of the board. Requires an android phone.
-
-Additional controls - Pause the game or reset the game anytime.
 
 
 ### GAME RULES
