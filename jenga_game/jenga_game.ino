@@ -19,7 +19,7 @@ void setup() {
   Serial.println("Starting setup");
   mytooth.setup("Mytooth Blue");
 
-  game1.Jenga_setup(150,200,255, 50000);
+  game1.Jenga_setup(190,200,220, 50000);
 
 
 }
